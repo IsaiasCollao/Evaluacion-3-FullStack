@@ -1,0 +1,48 @@
+# Maven build output
+target/
+*.class
+*.jar
+!**/mvnw
+!**/mvnw.cmd
+
+# IDE — IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# IDE — Eclipse / STS
+.settings/
+.project
+.classpath
+.springBeans
+
+# IDE — VS Code
+.vscode/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+# Environment / secrets
+.env
+*.env
+application-local.yaml
+application-local.properties
+
+# Spring Boot devtools restart
+spring-boot-devtools/
+
+# Test coverage reports
+/coverage/
+*.exec
+
+# Temporal
+*.tmp
+*.swp
