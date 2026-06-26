@@ -182,25 +182,10 @@ Content-Type: application/json
 # Respuesta: { "token": "eyJ..." }
 ```
 
----
-
-## Ejecución con Docker
-
-```bash
-# Levantar todos los servicios con un solo comando
-docker compose up --build
-
-# Detener
-docker compose down
-```
-
-> Requiere Docker Desktop instalado.
-
----
 
 ## Pruebas Unitarias
 
-El proyecto incluye **57 pruebas unitarias** distribuidas en 7 microservicios usando **JUnit 5 + Mockito**, con cobertura superior al 80%.
+El proyecto incluye pruebas unitarias distribuidas en 7 microservicios usando **JUnit 5 + Mockito**.
 
 ```bash
 # Ejecutar tests de un microservicio
@@ -212,19 +197,6 @@ cd ms-bicicleta/ms-bicicleta
 
 # Ejecutar un método específico
 ./mvnw test -Dtest=BicicletaServiceTest#crearBicicleta_codigoDuplicado_lanzaExcepcion
-```
-
-| Microservicio | Tests | Cobertura |
-|---|---|---|
-| ms-bicicleta | 11 | ~90% |
-| ms-user | 9 | ~85% |
-| ms-reservas | 12 | ~88% |
-| ms-rental | 10 | ~87% |
-| ms-pago | 11 | ~85% |
-| ms-notificacion | 2 | ~80% |
-| ms-auth | 2 | ~82% |
-
----
 
 ## Stack Tecnológico
 
