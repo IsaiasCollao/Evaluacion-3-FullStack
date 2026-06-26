@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: ms-bicicleta
+  datasource:
+    url: jdbc:mysql://localhost:3306/bikes_db
+    username: root
+    password: ""
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
