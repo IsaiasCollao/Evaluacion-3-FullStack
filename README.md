@@ -198,6 +198,8 @@ cd ms-bicicleta/ms-bicicleta
 # Ejecutar un método específico
 ./mvnw test -Dtest=BicicletaServiceTest#crearBicicleta_codigoDuplicado_lanzaExcepcion
 
+```
+
 ## Stack Tecnológico
 
 | Tecnología | Versión | Uso |
