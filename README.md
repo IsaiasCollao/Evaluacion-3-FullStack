@@ -13,10 +13,10 @@ Cada funcionalidad está encapsulada en un microservicio independiente que se co
 Cliente HTTP
      │
      ▼
-API Gateway  :8080  ── JWT Filter + Load Balancing
+API Gateway  :8080  ── JWT Filter 
      │
      ▼
-Eureka Server  :8761  ── Service Discovery (lb://)
+Eureka Server  :8761  ── Servicio de descubrimiento (lb://)
      │
      ├── ms-auth         :8088
      ├── ms-user         :8081
