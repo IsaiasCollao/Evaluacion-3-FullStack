@@ -1,0 +1,59 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+
+
+  cloud:
+    gateway:
+      routes:
+
+        - id: ms-user
+          uri: lb://ms-user
+          predicates:
+            - Path=/api/usuarios/**
+
+        - id: ms-auth
+          uri: lb://ms-auth
+          predicates:
+            - Path=/api/auth/**
+
+        - id: ms-bicicleta
+          uri: lb://ms-bicicleta
+          predicates:
+            - Path=/api/bicicletas/**
+
+        - id: ms-reservas
+          uri: lb://ms-reservas
+          predicates:
+            - Path=/api/reservas/**
+
+        - id: ms-rental
+          uri: lb://ms-rental
+          predicates:
+            - Path=/api/rentals/**
+
+        - id: ms-pago
+          uri: lb://ms-pago
+          predicates:
+            - Path=/api/pagos/**
+
+        - id: ms-notificacion
+          uri: lb://ms-notificacion
+          predicates:
+            - Path=/api/notificacion/**
+
+jwt:
+  secret: YWJjZGVmZ2hpamtsbW5vcHFyc3R1dnd4eXoxMjM0NTY3ODkwYWJjZGVm
+  expiration: 3600000
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+instance:
+  prefer-ip-address: true
